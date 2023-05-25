@@ -43,3 +43,62 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+const navItems= document.querySelectorAll("header nav a");
+
+navItems[0].textContent = siteContent["nav"]["nav-item-1"]
+navItems[1].textContent = siteContent["nav"]["nav-item-2"]
+navItems[2].textContent = siteContent["nav"]["nav-item-3"]
+navItems[3].textContent = siteContent["nav"]["nav-item-4"]
+navItems[4].textContent = siteContent["nav"]["nav-item-5"]
+navItems[5].textContent = siteContent["nav"]["nav-item-6"]
+
+
+for(var i=0; i<navItems.length; i++){
+  navItems[i].setAttribute("class", "italic");
+}
+
+
+const logoImg = document.querySelector("header img");
+logoImg.setAttribute("src", siteContent.images["logo-img"]);
+
+document.getElementById("cta-img").src = siteContent.images["cta-img"]
+document.getElementById("middle-img").src = siteContent.images["accent-img"]
+
+const mainText= document.querySelector(".cta-text");
+mainText.querySelector("h1").textContent = siteContent.cta.h1
+mainText.querySelector("button").textContent = siteContent.cta.button
+
+const topContent = document.querySelectorAll(".top-content .text-content");
+
+topContent[0].querySelector("h4").textContent = siteContent["ana-içerik"]["özellikler-h4"];
+topContent[0].querySelector("p").textContent = siteContent["ana-içerik"]["özellikler-içerik"];
+
+topContent[1].querySelector("h4").textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+topContent[1].querySelector("p").textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
+
+
+const bottomContent = document.querySelectorAll(".bottom-content .text-content");
+
+bottomContent[0].querySelector("h4").textContent = siteContent["ana-içerik"]["servisler-h4"];
+bottomContent[0].querySelector("p").textContent = siteContent["ana-içerik"]["servisler-içeriği"];
+
+bottomContent[1].querySelector("h4").textContent = siteContent["ana-içerik"]["ürünler-h4"];
+bottomContent[1].querySelector("p").textContent = siteContent["ana-içerik"]["ürünler-içeriği"];
+
+
+bottomContent[2].querySelector("h4").textContent = siteContent["ana-içerik"]["vizyon-h4"];
+bottomContent[2].querySelector("p").textContent = siteContent["ana-içerik"]["vizyon-içeriği"];
+
+const footeri = document.querySelector(".contact");
+
+footeri.querySelector("h4").textContent = siteContent["iletisim"]["iletişim-h4"];
+
+const footerip = document.querySelectorAll(".contact p");
+
+footerip[0].textContent = siteContent["iletisim"]["adres"];
+footerip[1].textContent = siteContent["iletisim"]["telefon"];
+footerip[2].textContent = siteContent["iletisim"]["email"];
+
+document.querySelector("footer a").textContent =siteContent.footer.copyright;
+document.querySelector("footer a").classList.add("bold");
